@@ -367,11 +367,11 @@ def main( ):
     #init PLC
     log.debug("--Start--")
     plc = OmronUDP( )
-    plc.bindUdp( 9600,host='192.168.1.240')
+    plc.bindUdp( 9600,host='192.168.250.1')
 
     #do it
     while 1:
-        rdata = plc.readMem( "D166",2,('192.168.1.240',9600)) # xx.xx.xx.255- broadcast - work too!
+        rdata = plc.readMem( "D166",2,('192.168.250.1',9600)) # xx.xx.xx.255- broadcast - work too!
         rdata.sort()
         for (d,a) in rdata:
             print(a)

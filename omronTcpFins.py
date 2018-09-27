@@ -325,7 +325,7 @@ import time
 
 def main( ):
     plc = OmronPLC( )
-    tcp_ip='192.168.1.240'
+    tcp_ip=b'192.168.250.1'
     tcp_port=9600
     plc.openFins(tcp_ip, tcp_port)
     print (plc.readMemC('D0', 2))
